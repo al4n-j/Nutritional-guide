@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create new user</title>
+  <link rel="icon" href="/static/logo.jpg" type="jpg">
+  <style>
+    /* Resetting default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial Bold, sans-serif;
+  background-color: #625656;
+  background-image: url("/static/bg1.jpg"); /* Replace 'your-background-image.jpg' with the path to your background image */
+    background-size: cover;
+    background-position: center;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-side,
+.right-side {
+  width: 45%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="radio"] {
+  width: calc(100% - 10px);
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.flash {
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+  </style>
+</head>
+<body>
+    {% for massage in get_flashed_messages() %}
+    <div class="flash">
+        <p>{{massage}}</p>
+    </div>  
+    {% endfor %}
+    <form method="post">
+      <h2>Create new user</h2>
+      <div class="form-container">
+        <div class="left-side">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+
+          <label for="confirmPassword">Confirm Password:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required>
+        </div>
+        <div class="right-side">
+          <label for="brichpollen">Brich Pollen:</label><br>
+          <input type="radio" id="brichpollen" name="brichpollen" value="True">
+          <label for="true">True</label><br>
+          <input type="radio" id="brichpollen" name="brichpollen" value="False">
+          <label for="false">False</label><br>
+
+          <label for="citrus">Citrus:</label><br>
+          <input type="radio" id="citrus" name="citrus" value="True">
+          <label for="true">True</label><br>
+          <input type="radio" id="citrus" name="citrus" value="False">
+          <label for="false">False</label><br>
+
+          <label for="grasspollen">Grass Pollen:</label><br>
+          <input type="radio" id="grasspollen" name="grasspollen" value="True">
+          <label for="true">True</label><br>
+          <input type="radio" id="grasspollen" name="grasspollen" value="False">
+          <label for="false">False</label><br>
+
+          <label for="latex">Latex:</label><br>
+          <input type="radio" id="latex" name="latex" value="True">
+          <label for="true">True</label><br>
+          <input type="radio" id="latex" name="latex" value="False">
+          <label for="false">False</label><br>
+
+          <label for="mugwortpollen">Mugwort Pollen:</label><br>
+          <input type="radio" id="mugwortpollen" name="mugwortpollen" value="True">
+          <label for="true">True</label><br>
+          <input type="radio" id="mugwortpollen" name="mugwortpollen" value="False">
+          <label for="false">False</label><br>
+
+          <label for="nightshade">Nightshade Sensitivity:</label><br>
+          <input type="radio" id="nightshade" name="nightshade" value="True">
+          <label for="true">True</label><br>
+          <input type="radio" id="nightshade" name="nightshade" value="False">
+          <label for="false">False</label><br>
+
+          <label for="pollen">Pollen:</label><br>
+          <input type="radio" id="pollen" name="pollen" value="True">
+          <label for="true">True</label><br>
+          <input type="radio" id="pollen" name="pollen" value="False">
+          <label for="false">False</label><br>
+
+          <label for="soy">Soy:</label><br>
+          <input type="radio" id="soy" name="soy" value="True">
+          <label for="true">True</label><br>
+          <input type="radio" id="soy" name="soy" value="False">
+          <label for="false">False</label>
+        </div>
+      </div>
+      <button type="submit">Sign In</button>
+    </form>
+
+</body>
+</html>

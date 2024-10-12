@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            background-image: url('/static/newbackground.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex; /* Use flexbox for layout */
+            justify-content: flex-end; /* Align content to the right */
+            align-items: center;
+            font-family: "Helvetica", sans-serif;
+            height: 100vh;
+            margin: 0;
+            font-size:20px;
+            padding-right: 160px;
+        }
+        /* You can add additional CSS styling for your content here */
+        h1, h2, p {
+            margin: 10px;
+            text-align: left; /* Align text to the right */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Nutritional Guide</h1><br>
+        <h2>{{ predict }}</h2>
+        <h2 style="color: brown;">{{ reccomendation }}</h2>
+        <h2>{{allergy}}</h2>
+        <br><h3>Calorie (per 100g)</h3>
+        <p>Energy      : {{energy}} kcal</p>
+        <p>Protein     : {{protein}} g</p>
+        <p>Total Fat   : {{total_fat}}</p>
+        <p>Carbohydrate: {{carbohydrate}} g</p>
+        <p>Sugar       : {{sugar}} g</p>
+        <p>Fiber       : {{fiber}} g</p>
+        <p>Vitamin C   : {{vitamin_c}} %</p>
+        <p>Vitamin A   : {{vitamin_a}} %</p>
+        <p>Vitamin K   : {{vitamin_k}} %</p>
+        <p>Iron        : {{iron}} %</p>
+        <p>Calcium     : {{calcium}} %</p>
+        <p>Magnesium   : {{magnesium}} %</p>
+    </div>
+</body>
+</html>
+
